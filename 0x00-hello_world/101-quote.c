@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-i
+
 /**
  * main - Entry point
  *
