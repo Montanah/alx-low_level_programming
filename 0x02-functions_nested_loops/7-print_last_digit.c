@@ -2,7 +2,7 @@
 #include "6-abs.c"
 
 /**
- * prints_last_digit - main function
+ * print_last_digit - main function
  *
  * @r: ineger to get last digit of number
  *
