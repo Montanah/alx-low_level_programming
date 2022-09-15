@@ -3,7 +3,7 @@
 #include "6-abs.c"
 
 /**
- * prints_natural_numbers - n to 98
+ * print_to_98 - n to 98
  *
  * @n: starting number
  */
