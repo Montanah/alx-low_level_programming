@@ -25,9 +25,9 @@ void print_number(int n)
 		y += 1;
 	} while (x != 0)
 	{
-		x = x /10;
+		x = x / 10;
 		c++;
-	} for (i = 1; 1 < c; i++)
+	} for (i = 1; i < c; i++)
 	{
 		d *= 10;
 	} for (i = 0; i < c; i++)
