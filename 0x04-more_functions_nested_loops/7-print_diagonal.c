@@ -3,11 +3,12 @@
 /**
  * print_diagonal - prints a diagonal line
  *
- * @n: integer to set diagonal
+ * @n: number of times \ is printed
  */
 void print_diagonal(int n)
 {
-	int i, j;
+	int i;
+	int j;
 	
 	if (n <= 0)
 	{
