@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_array - prints n elements of array
@@ -14,6 +15,6 @@ int main(void)
 	array[2] = -198;
 	array[3] = 298;
 	array[4] = 1024;
-	printf(array, 5);
+	print_array(array, 5);
 	return (0);
 }
