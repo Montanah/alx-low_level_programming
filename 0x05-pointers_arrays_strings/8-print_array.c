@@ -4,17 +4,19 @@
 /**
  * print_array - prints n elements of array
  *
- * Return: ALways 0
+ * @a: pointer of array
+ *
+ * @n: number of times to print
  */
-int main(void)
+void print_array(int *a, int n)
 {
-	int array[5];
+	int j;
 
-	array[0] = 98;
-	array[1] = 402;
-	array[2] = -198;
-	array[3] = 298;
-	array[4] = 1024;
-	print_array(array, 5);
-	return (0);
+	for (j = 0; j < n; j++)
+	{
+		printf("%d", a[j]);
+		if (i != n - 1)
+			printf(", ");
+	}
+	printf("\n");
 }
