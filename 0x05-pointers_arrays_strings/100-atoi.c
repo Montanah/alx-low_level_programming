@@ -10,42 +10,17 @@
  */
 int _atoi(char *s)
 {
-	int i;
-	int c;
-	int d = 1;
-	int np = 0;
-	int num = 0;
+	int sign = 1;
+	unsigned int = j;
 
-	for (i = 0; i < _strlen(s); i++)
-	{
-		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
-		{	
+	j = 0;
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			j = (j * 10) + (*s - '0');
+		else if (j > '0')
 			break;
-		}
-		if (s[i] == '-')
-		{	
-			np--;
-		}
-		if (s[i] == '+')
-		{	
-			np++;
-		}
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			c++;
-		}
-	} while (c > 0)
-	{
-		num += ((s[i - 1] - '0') * d);
-		i--;
-		c--;
-		d *= 10;
-	} if (np >= 0)
-	{
-		num *= 1;
-	} else
-	{
-		num *= -1;
-	}
-	return (num);
+	}while (*s++);
+	return (j * sign);
 }
