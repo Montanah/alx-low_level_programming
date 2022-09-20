@@ -21,6 +21,6 @@ int _atoi(char *s)
 			j = (j * 10) + (*s - '0');
 		else if (j > '0')
 			break;
-	}while (*s++);
+	} while (*s++);
 	return (j * sign);
 }
