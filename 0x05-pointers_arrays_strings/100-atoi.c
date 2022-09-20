@@ -19,7 +19,7 @@ int _atoi(char *s)
 	{
 		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
 			break;
-		if (s[i] == '_')
+		if (s[i] == '-')
 			np--;
 		if (s[i] == '+')
 			np++;
