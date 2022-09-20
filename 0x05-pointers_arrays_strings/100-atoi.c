@@ -10,8 +10,7 @@
  */
 int _atoi(char *s)
 {
-	int i;
-        int c;
+	int i, c;
 	int d = 1;
 	int np = 0;
 	int num = 0;
@@ -19,11 +18,17 @@ int _atoi(char *s)
 	for (i = 0; i < _strlen(s); i++)
 	{
 		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
+		{	
 			break;
+		}
 		if (s[i] == '-')
+		{	
 			np--;
+		}
 		if (s[i] == '+')
+		{	
 			np++;
+		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			c++;
