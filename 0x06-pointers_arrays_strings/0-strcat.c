@@ -6,6 +6,8 @@
  * @dest: dstination of concat
  *
  * @src: source string to concat
+ *
+ * Return: char value
  */
 char *_strcat(char *dest, char *src)
 {
