@@ -29,18 +29,18 @@ int length(char *s)
  */
 int helper2(int i, char *s)
 {
-	 if (*s)
-	 {
-		 if (*s != s[length(s) - i])
-		 {
-			 return (0);
-		 }
-		 else
-		 {
-			 return (helper2(i + 1, s + 1));
-		 }
-	 }
-	 return (1);
+	if (*s)
+	{
+		if (*s != s[length(s) - i])
+		{
+			return (0);
+		}
+		else
+		{
+			return (helper2(i + 1, s + 1));
+		}
+	}
+	return (1);
 }
 /**
  * is_palindrome - checks if string is a palidrome
