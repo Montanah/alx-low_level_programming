@@ -13,7 +13,7 @@ int length(char *s)
 
 	if (*s)
 	{
-		i = 1 + length(s + 1);
+		i = i + length(s + 1);
 		return (i += 1);
 	}
 	return (0);
@@ -51,7 +51,7 @@ int helper2(int i, char *s)
  */
 int is_palindrome(char *s)
 {
-	int i =1;
+	int i = 1;
 
 	return (helper2(i, s));
 }
