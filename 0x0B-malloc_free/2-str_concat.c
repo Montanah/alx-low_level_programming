@@ -28,6 +28,14 @@ char *str_concat(char *s1, char *s2)
 		len1++;
 	}
 
+	i = 0;
+
+	while (s2[i] != '\0')
+	{
+		i++;
+		len2++;
+	}
+
 	conc = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (conc == NULL)
 		return (NULL);
