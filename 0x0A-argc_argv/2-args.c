@@ -4,7 +4,7 @@
  * main - main function
  * @argc: argument count
  * @argv: argument vector
- * Reeturn: always 0
+ * Return: always 0
  */
 int main(int agrc, char *argv[])
 {
