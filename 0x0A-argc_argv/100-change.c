@@ -18,31 +18,31 @@ int main(int argc, char *argv[])
 			printf("0\n");
 			return (1);
 		}
-		int money;
+		int cents;
 
-		money = atoi(argv[argc - 1]);
+		cents = atoi(argv[argc - 1]);
 
-		while (money > 0)
+		while (cents > 0)
 		{
-			if (money % 25 == 0)
+			if (cents % 25 == 0)
 			{
-				money -= 25;
+				cents -= 25;
 			}
-			else if (money % 10 == 0)
+			else if (cents % 10 == 0)
 			{
-				money -= 10;
+				cents -= 10;
 			}
-			else if (money % 5 == 0)
+			else if (cents % 5 == 0)
 			{
-				money -= 5;
+				cents -= 5;
 			}
-			else if (money % 2 == 0)
+			else if (cents % 2 == 0)
 			{
-				money -= 2;
+				cents -= 2;
 			}
 			else
 			{
-				money--;
+				cents--;
 			}
 			coins++;
 		}
