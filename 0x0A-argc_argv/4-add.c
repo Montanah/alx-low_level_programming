@@ -9,7 +9,7 @@
 int StringCheck(char *s)
 {
 	int i = 0;
-
+	
 	for (; s[i] != '\0'; i++)
 	{
 		if (!isdigit(s[i]))
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int result = 0;
-
+	
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
