@@ -13,7 +13,7 @@
  *
  * Return: char value
  */
-char **helper(int word, int len, char *str, charr **s)
+char **helper(int word, int len, char *str, char **s)
 {
 	int i, j, k;
 
