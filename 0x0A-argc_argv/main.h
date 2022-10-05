@@ -5,5 +5,6 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]);
+int StringCheck(char *s);
 
 #endif
