@@ -2,11 +2,8 @@
 
 /**
  * argstostr - concatenates all the arguments
- *
  * @ac: argument count
- *
  * @av: array of arguments
- *
  * Return: Char values
  */
 char *argstostr(int ac, char **av)
@@ -41,6 +38,5 @@ char *argstostr(int ac, char **av)
 		k++;
 	}
 	s[k] = '\0';
-
 	return (s);
 }
