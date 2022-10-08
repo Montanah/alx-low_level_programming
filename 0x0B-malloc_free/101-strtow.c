@@ -2,15 +2,10 @@
 
 /**
  * helper - helps the function
- *
  * @word: word count
- *
  * @len: length
- *
  * @str: string to go through
- *
  * @s: array being assigned
- *
  * Return: char value
  */
 char **helper(int word, int len, char *str, char **s)
