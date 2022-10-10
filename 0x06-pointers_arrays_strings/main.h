@@ -14,5 +14,6 @@ char *cap_string(char *);
 int _indexOf(char a);
 char *rot13(char *);
 void print_number(int n);
+int _putchar(char c);
 
 #endif
