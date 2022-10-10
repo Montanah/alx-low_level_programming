@@ -13,7 +13,7 @@ void print_number(int n)
 
 	if (n == 0)
 	{
-		_putchar(0);
+		_putchar('0');
 	}
 	if (n < 0)
 	{
@@ -23,8 +23,8 @@ void print_number(int n)
 		n++;
 	}
 	abs = n;
-
 	abSCount = n;
+
 	while (abSCount > 0)
 	{
 		abSCount /= 10;
