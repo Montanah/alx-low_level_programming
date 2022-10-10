@@ -5,7 +5,7 @@
  * @s: character to change
  * Retun: value of upper
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 	int i;
 
