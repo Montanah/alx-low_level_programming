@@ -21,7 +21,7 @@ int _indexOf(char a)
  * @s: string to capitalize
  * Return: the string capitalized
  */
-char *cap_string(char *)
+char *cap_string(char *s)
 {
 	int i;
 
