@@ -1,4 +1,4 @@
-#include "main.h."
+#include "main.h"
 /**
  * _indexOf - returns boolean if special character
  * @a: character to return
