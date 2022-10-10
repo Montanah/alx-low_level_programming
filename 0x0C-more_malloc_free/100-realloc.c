@@ -3,8 +3,8 @@
 /**
 * _realloc - reallocates memory
 * @ptr: points to memory previously allocated
-* old_size: old size allocated
-* ne_size: new size allocated
+* @old_size: old size allocated
+* @new_size: new size allocated
 * Return: integer value
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -20,6 +20,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 		if (nptr == NULL)
 			return (NULL);
+
 		return (nptr);
 	}
 	else 
@@ -40,5 +41,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		nptr[i] = ((char *) ptr)[i];
 	}
 	free(ptr);
-	return (ptr);
-ii}
+	return (nptr);
+}
