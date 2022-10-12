@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int coins = 0;
 
-	if (argc != 2)
+	if (argc == 2)
 	{
 		if (strchr(argv[argc - 1], '-'))
 		{

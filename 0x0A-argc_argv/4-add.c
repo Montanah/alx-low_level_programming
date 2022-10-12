@@ -1,6 +1,5 @@
 #include "main.h"
 #include <ctype.h>
-
 /**
  * StringCheck - checks string
  * @s: string to check
@@ -13,7 +12,7 @@ int StringCheck(char *s)
 	for (; s[i] != '\0'; i++)
 	{
 		if (!isdigit(s[i]))
-i		{
+		{
 			return (0);
 		}
 	}
