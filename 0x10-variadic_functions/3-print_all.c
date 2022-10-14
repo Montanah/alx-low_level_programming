@@ -11,8 +11,8 @@ int print_c(va_list a)
 }
 /**
  * print_i - prints int
- *  @a: list to give
- *  Return: always 0
+ * @a: list to give
+ * Return: always 0
  */
 int print_i(va_list a)
 {
@@ -21,8 +21,8 @@ int print_i(va_list a)
 }
 /**
  * print_f - prints float
- *  @a: list to give
- *  Return: always 0
+ * @a: list to give
+ * Return: always 0
  */
 int print_f(va_list a)
 {
