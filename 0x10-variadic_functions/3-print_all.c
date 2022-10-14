@@ -27,7 +27,7 @@ int print_i(va_list a)
 int print_f(va_list a)
 {
 	printf("%f", va_arg(a, double));
-	retrun (0);
+	return (0);
 }
 /**
  * print_s - prints string
