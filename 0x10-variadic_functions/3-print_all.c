@@ -50,6 +50,7 @@ int print_s(va_list a)
 /**
  * print_all - prints all
  * @format: format string that says arg types
+ *
  */
 void print_all(const char * const format, ...)
 {
@@ -57,8 +58,7 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 	char *sep2 = ", ";
 	va_list anyArgs;
-	printer ops[] =
-	{
+	printer ops[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"s", print_s},
@@ -84,4 +84,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
+	va_end(anyArgs);
 }
