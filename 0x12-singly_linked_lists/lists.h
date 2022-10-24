@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stblib.h>
+#include <string.h>
 #include <stddef.h>
 
 /**
