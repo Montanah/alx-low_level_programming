@@ -5,6 +5,11 @@
 #include <stdlib.h>
 
 int _putchar(char c);
+/**
+ * _islower - prints if c is lower case
+ * @c: character to use
+ * Return: 0 or 1
+ */
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
