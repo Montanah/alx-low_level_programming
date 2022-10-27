@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * free_listint - frees the list
- * @head: head of node
+ * @head: head of struct
  */
 void free_listint(listint_t *head)
 {
