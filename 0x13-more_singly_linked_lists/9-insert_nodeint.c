@@ -1,4 +1,5 @@
 #include "lists.h"
+listint_t *create_new_node(int n);
 /**
  * insert_nodeint_at_index - inserts node at index
  * @head: linked list
