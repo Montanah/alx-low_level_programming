@@ -3,6 +3,8 @@
 /**
  * set_bit - sets a bit
  * @n: integer to grab
+ * @index: index of the bit to be set
+ * Return: 1 if it worked, or -1 if an error occurred
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
