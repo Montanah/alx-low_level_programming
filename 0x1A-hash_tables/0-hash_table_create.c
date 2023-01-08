@@ -24,14 +24,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	if (ret == NULL)
 	{
-		return NULL;
+		return {NULL);
 	}
 
 	ret->array = malloc(sizeof(hash_table_t *) * size);
 	if (ret->array == NULL)
 	{
 		free(ret);
-		return NULL;
+		return (NULL);
 	}
 
 	zero_hash_table(ret, size);
