@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+
 /**
  * zero_hash_table - sets values in hash_table's array to 0
  * @table: table to be set
@@ -15,6 +16,7 @@ void zero_hash_table(hash_table_t *table, unsigned long int size)
 		ptr++;
 	}
 }
+
 /**
  * hash_table_create - creates a new hash table
  *  @size: size of hash table to be created
