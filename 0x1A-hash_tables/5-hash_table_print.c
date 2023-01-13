@@ -16,7 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	if (ht == NULL)
 	{
-		return; 
+		return;
 	}
 
 	if (ht->size == 0)
@@ -36,12 +36,12 @@ void hash_table_print(const hash_table_t *ht)
 			if (is_first == FALSE)
 			{
 				printf(", '%s': '%s'", node_ptr->key,
-						node_ptr->value);
+					node_ptr->value);
 			}
 			else
 			{
 				printf("'%s': '%s'", node_ptr->key,
-						node_ptr->value);
+					node_ptr->value);
 			}
 			is_first = FALSE;
 			node_ptr = node_ptr->next;
