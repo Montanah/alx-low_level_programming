@@ -31,6 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		node_ptr = node_ptr->next;
 	}
+
 	node_ptr = malloc(sizeof(hash_node_t));
 	if (node_ptr == NULL)
 	{
