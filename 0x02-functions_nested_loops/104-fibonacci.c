@@ -2,29 +2,44 @@
 
 /**
  * main - main function
- *
  * Return: return 0
  */
 int main(void)
 {
-	int counter = 2;
+	int i;
+	unsigned long int m = 1, temp0, o = 1;
+	unsigned long int p, temp1, s;
 
-	float a = 1;
-	float b = a + 1;
-	float c = a + b;
-
-	printf("%.0f, ", a);
-	printf("%.0f, ", b);
-	while (counter < 98)
+	for (i = 0; i < 98; i++)
 	{
-		counter++;
-		printf("%.0f", c);
-		a = b;
-		b = c;
-		c = a + b;
-		if (counter < 98)
+		if (i < 91)
 		{
-			printf(", ");
+			printf("%lu, ", m);
+			temp0 = m;
+			m = temp0 + o;
+			o = temp0;
+		}
+		else if (i == 91)
+		{
+			p = m / 1000000000;
+			m = m % 1000000000;
+			printf("%lu%lu, ", p, m);
+			s = o / 1000000000;
+			o = o % 1000000000;
+		}
+		else if (i > 91)
+		{
+			temp1 = p;
+			temp0 = m;
+			p = p + s;
+			m = m + o;
+			s = temp1;
+			o = temp0;
+			p = p + m / 1000000000;
+			m = m % 1000000000;
+			printf("%lu%lu", p, m);
+			if (i != 97)
+				printf(", ");
 		}
 	}
 	printf("\n");
