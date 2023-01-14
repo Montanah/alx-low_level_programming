@@ -2,6 +2,7 @@
 
 /**
  * times_table - times table function
+ * Return: none
  */
 void times_table(void)
 {
