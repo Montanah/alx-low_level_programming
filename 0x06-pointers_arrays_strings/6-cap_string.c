@@ -1,36 +1,32 @@
 #include "main.h"
-/**
- * _indexOf - returns boolean if special character
- * @a: character to return
- * Return: true or false
- */
-int _indexOf(char a)
-{
-	int i;
-	char capArr[13] = {'\n', '\t', ' ', '-', ',', ';', ',', '!', '?', '(', ')', '{', '}'};
 
-	for (i = 0; i < 13; i++)
-	{
-		if (capArr[i] == a)
-			return (1);
-	}
-	return (0);
-}
 /**
  * cap_string - capitalizes the string
- * @s: string to capitalize
- * Return: the string capitalized
+ * @str: string to be evaluated
+ * Return: pointer to string
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i;
+	char *ptr = str;
+	int _bool = 1;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*ptr)
 	{
-		if (_indexOf(s[i]))
-			continue;
-		if (s[i] >= 'a' && s[i] <= 'z' && (_indexOf(s[i - 1]) || i == 0))
-			s[i] = s[i] - 32;
+		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n'
+			|| *ptr == ',' || *ptr == ';' || *ptr == '.'
+			|| *ptr == '!' || *ptr == '?' || *ptr == '"'
+			|| *ptr == '(' || *ptr == ')' || *ptr == '{'
+			|| *ptr == '}')
+			_bool = 1;
+		else if (_bool == 1 && *ptr >= 'a' && *ptr <= 'z')
+		{
+			*ptr -= 32;
+			_bool = 0;
+		}
+		else
+			_bool = 0;
+
+		ptr++;
 	}
-	return (s);
+	return (str);
 }
