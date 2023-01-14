@@ -1,24 +1,32 @@
 #include <stdio.h>
+
 /**
  * leet - encodes string
- * @s: string to use
- * Return: char value
+ * @str: string to be evaluated
+ * Return: pointer to string
  */
-char *leet(char *s)
+char *leet(char *str)
 {
-	char alphaArr[] = "a4AA4e3E3o0O0t7T7l1L1";
-	int i, j;
+	char *ptr = str;
+	char letA[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L', '\0'};
+	char numA[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1', '\0'};
+	char *letCount = letA;
+	char *numCount = numA;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*ptr != '\0')
 	{
-		for (j = 0; alphaArr[j] != '\0'; j++)
+		while (*letCount != '\0')
 		{
-			if (s[i] == alphaArr[j])
-			{
-				s[i] = alphaArr[j + 1];
-				break;
-			}
+			if (*ptr == *letCount)
+				*ptr = *numCount;
+
+			letCount++;
+			numCount++;
+
 		}
+		letCount = letA;
+		numCount = numA;
+		ptr++;
 	}
-	return (s);
+	return (str);
 }
