@@ -8,7 +8,8 @@
  * @size_r: size of the buffer
  * Return: pointer to r if sum can be stored in buffer, 0 otherwise
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+char *infinite_add(char__attribute__((unused)) * n1, char__atribute__((unused))
+		* n2, char__attribute__((unused)) * r, int__attribute__((unused)) size_r)
 {
 	int digit, carry = 0, n1i, n2i;
 	char *rPtr = r + (size_r - 1), *n1Ptr = n1, *n2Ptr = n2;
