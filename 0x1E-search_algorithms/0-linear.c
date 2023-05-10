@@ -2,11 +2,11 @@
 
 /**
  * linear_search - finds a value by checking one aftre the other
- * @array: array to be checked
- * @size: size of array
- * @value: value to be searched for
+ * @array: is a pointer to the first element of the array to search in
+ * @size: number of elements in the array
+ * @value: value to search for
  *
- * Return: index of value, or -1 if not found
+ * Return: first index where value is located or -1 if not found
  */
 int linear_search(const int *array, size_t size, int value)
 {
