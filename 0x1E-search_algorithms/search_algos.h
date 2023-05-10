@@ -1,6 +1,8 @@
 #ifndef ALG_H
 #define ALG_H
 
+#include <stdlib.h>
+
 /**
  * struct listint_s - singly linked list
  *
