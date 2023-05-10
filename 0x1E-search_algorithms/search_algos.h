@@ -1,5 +1,5 @@
-#ifndef ALG_H
-#define ALG_H
+#ifndef SEARCH_ALGOS_H
+#define SEARCH_ALGOS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -58,4 +58,4 @@ listint_t *jump_list(listint_t *list, size_t size, int value);
 
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
-#endif
+#endif /* SEARCH_ALGOS_H */
