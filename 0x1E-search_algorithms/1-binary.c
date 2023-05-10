@@ -1,9 +1,9 @@
 #include "search_algos.h"
 
 /**
- * print_array - prints an array
- * @array: array to print
- * @size: size of array
+ * print_array - print the array being searched every time it changes
+ * @array: a pointer to the first element of the array to search in
+ * @size: number of elements in array
  */
 void print_array(int *array, size_t size)
 {
@@ -19,11 +19,11 @@ void print_array(int *array, size_t size)
 
 /**
  * binary_search - finds a value by checking value at middle of array
- * @array: array to be checked
- * @size: size of array
- * @value: value to be searched for
+ * @array: a pointer to the first element of the array to search in
+ * @size: number of elements in array
+ * @value: value to search for
  *
- * Return: index of value, or -1 if not found
+ * Return: first index where value is located or -1 if not found
  */
  int binary_search(int *array, size_t size, int value)
 {
