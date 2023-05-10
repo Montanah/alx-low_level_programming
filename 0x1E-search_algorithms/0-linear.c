@@ -8,8 +8,10 @@
  *
  * Return: first index where value is located or -1 if not found
  */
-int linear_search(const int *array, size_t size, int value)
+int linear_search(int *array, size_t size, int value)
 {
+	int i;
+
     if (array == NULL)
 	{
 		return (-1);
