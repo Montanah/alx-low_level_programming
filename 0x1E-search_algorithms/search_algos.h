@@ -1,6 +1,7 @@
 #ifndef ALG_H
 #define ALG_H
 
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
