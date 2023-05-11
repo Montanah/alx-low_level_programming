@@ -27,15 +27,16 @@ void print_array(int *array, size_t size)
  */
  int binary_search(int *array, size_t size, int value)
 {
-    if (array == NULL || size == 0)
+    int low, high, mid;
+
+	if (array == NULL || size == 0)
 	{
 		return (-1);
 	}
 
-    int low = 0;
-    int high = size - 1;
-    int mid;
-
+	low = 0;
+    high = size - 1;
+    
     while (low <= high)
     {
 		mid = low + (high - low) / 2;
