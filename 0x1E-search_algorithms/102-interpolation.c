@@ -19,7 +19,7 @@ int interpolation_search(int *array, size_t size, int value)
 		return (-1);
 	}
 
-	pos = low + (((double)(right - left) / (array[right] - array[left]))
+	pos = left + (((double)(right - left) / (array[right] - array[left]))
 		     * (value - array[left]));
 
 	while (1)
