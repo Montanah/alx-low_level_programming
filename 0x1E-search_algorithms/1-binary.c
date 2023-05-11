@@ -3,18 +3,21 @@
 /**
  * print_array - print the array being searched every time it changes
  * @array: a pointer to the first element of the array to search in
- * @size: number of elements in array
+ * @low: the beginning of the array
+ * @high: the end of the array
  */
-void print_array(int *array, size_t size)
+void print_array(int *array, size_t high, size_t low)
 {
-	unsigned int i;
+	size_t i;
 
-	for (i = 0; i < size - 1; i++, array++)
+	printf("Searching in the array: ");
+
+	for (i = low ; i < high; i++)
 	{
-		printf("%i, ", *array);
+		printf("%i, ", array[i]);
 	}
 
-	printf("%i\n", *array);
+	printf("%i\n", array[i]);
 }
 
 /**
@@ -25,9 +28,9 @@ void print_array(int *array, size_t size)
  *
  * Return: first index where value is located or -1 if not found
  */
- int binary_search(int *array, size_t size, int value)
+int binary_search(int *array, size_t size, int value)
 {
-    int low, high, mid;
+	size_t low, high, mid;
 
 	if (array == NULL || size == 0)
 	{
@@ -35,11 +38,13 @@ void print_array(int *array, size_t size)
 	}
 
 	low = 0;
-    high = size - 1;
-    
-    while (low <= high)
-    {
-		mid = low + (high - low) / 2;
+	high = size - 1;
+
+	while (low <= high)
+	{
+		print_array(array, high, low);
+
+		mid = (low + high) / 2;
 
 		if (array[mid] == value)
 		{
@@ -51,7 +56,7 @@ void print_array(int *array, size_t size)
 			low = mid + 1;
 		}
 
-		else
+		else if (array[mid] > value)
 		{
 			high = mid - 1;
 		}
