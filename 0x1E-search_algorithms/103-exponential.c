@@ -7,7 +7,7 @@
  */
 void print_array(int *array, size_t size)
 {
-	size_t i;
+	unsigned int i;
 
 	for (i = 0; i < size - 1; i++, array++)
 	{
