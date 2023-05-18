@@ -1,23 +1,6 @@
 #include "search_algos.h"
 
 /**
- * print_array - prints an array
- * @array: array to print
- * @size: size of array
- */
-void print_array(int *array, size_t size)
-{
-	size_t i;
-
-	for (i = 0; i < size - 1; i++, array++)
-	{
-		printf("%i, ", *array);
-	}
-
-	printf("%i\n", *array);
-}
-
-/**
  * binary_search - finds a value by checking value at middle of array
  * @array: a pointer to the first element of the array to search in
  * @size: number of elements in array
@@ -27,44 +10,44 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int mid;
-	int result;
+	size_t i, low, mid, high;
 
 	if (array == NULL || size == 0)
 	{
 		return (-1);
 	}
-	
-	printf("Searching in array: ");
-	print_array(array, size);
 
-	if (size == 1 && *array != value)
-	{
-		return (-1);
-	}
+	low = 0;
+	high = size - 1;
 
-	mid = (size - 1) / 2;
+	do {
+		printf("Searching in array: ");
 
-	if (*(array + mid) == value)
-	{
-		return (mid);
-	}
-	if (*(array + mid) > value)
-	{
-		return (binary_search(array, mid, value));
-	}
-	if (*(array + mid) < value)
-	{
-		result = binary_search(array + mid + 1, size - 1 - mid, value);
-		if (result == -1)
+		for (i = low; i < high; i++)
 		{
-			return (-1);
+			printf("%d, ", array[i]);
 		}
-		return (result + mid + 1);
-	}
+
+		printf("%d\n", array[i]);
+
+		mid = (low + high) / 2;
+
+		if (array[mid] < value)
+		{
+			low = mid + 1;
+		}
+		else if (array[mid] > value)
+		{
+			high = mid - 1;
+		}
+		else if (array[mid] == value)
+		{
+			return (mid);
+		}
+	} while (low <= high);
+
 	return (-1);
 }
-
 /**
  * exponential_search - finds a value by multiplying the checking index
  * by two every iteration
